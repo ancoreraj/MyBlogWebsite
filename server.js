@@ -36,4 +36,4 @@ app.use('/articles',articleRouter);
 
 
 console.log('The app is listening to port 3000')
-app.listen(3000);
+app.listen(process.env.PORT);
