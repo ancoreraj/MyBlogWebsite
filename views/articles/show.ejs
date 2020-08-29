@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1 class="mb-1"><%= article.title %></h1>
+
+        <div class="text-muted mb-2"><%= article.createdAt %></div>
+
+        <a href="/" class="btn btn-secondary">All Articles</a>
+
+        <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
+
+
+        <!-- this is sanitizedHtml , if we dont want to use this then 
+        just use article.markdown -->
+        <div class="">
+            <%- article.sanitizedHtml %>
+
+        </div>
+
+        
+    </div>
+    
+</body>
+</html>
