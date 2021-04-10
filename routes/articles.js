@@ -31,7 +31,7 @@ router.get('/:slug',async (req,res)=>{
     res.render('articles/show', {article: article})
     
 })
-
+ 
 //when we submit the form it will go to the / which is article/index 
 router.post('/', async (req, res, next)=>{
     req.article = new Article()
